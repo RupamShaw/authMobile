@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "plugin:jest/recommended",
+    "plugin:react-native/all"
+  ],
+  "parser": "babel-eslint",
+  "plugins": ["flowtype","react","jest","react-native" ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "jsx": true,
+      "classes": true
+    }
+  },
+  "rules": {
+    "consistent-return": "off",
+    "import/no-named-as-default": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react-native/no-unused-styles": "error",
+    "react-native/split-platform-components": "off",
+    "react-native/no-inline-styles": "error",
+    "react-native/no-color-literals": "off",
+    "flowtype/no-types-missing-file-annotation": "off",
+    "react/forbid-prop-types": [0, { "forbid": [] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-return-await": "off",
+    "global-require": "off",
+    "linebreak-style": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  }
+}

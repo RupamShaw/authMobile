@@ -1,0 +1,93 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "jest",
+    "flow": "flow",
+    "flow-stop": "flow stop",
+    "test-watch": "jest --watch",
+    "debug": "node  --debug-brk --inspect ./node_modules/jest/bin/jest.js -i",
+    "lint": "eslint \"/**\" --fix"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16.3": "^1.1.0",
+    "eslint-plugin-jest": "^21.22.1",
+    "eslint-watch": "^4.0.2",
+    "expo": "^31.0.2",
+    "expo-cli": "^2.1.2",
+    "expo-web": "^0.0.12",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.0.0",
+    "jest": "^23.5.0",
+    "jest-fetch-mock": "^1.6.5",
+    "native-base": "^2.8.0",
+    "prop-types": "^15.6.2",
+    "react": "16.5.0",
+    "react-dom": "16.0.0",
+    "react-intl": "^2.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-cli": "^2.0.1",
+    "react-native-modal-dropdown": "^0.6.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-native": "^4.3.0",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/**/?(*.)(test|spec).js?(x)"
+    ],
+    "automock": false,
+    "preset": "jest-expo",
+    "setupFiles": [
+      "<rootDir>tests/setupTests.js"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/*.(test|spec).js",
+      "!**/__tests__/**/*"
+    ],
+    "moduleFileExtensions": [
+      "mock.js",
+      "js",
+      "web.js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|expo|react-intl|react-native-modal-dropdown|react-native-button)/)"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer",
+      "react-native-web/jest/serializer"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-expo"
+    ],
+    "env": {
+      "development": {
+        "plugins": [
+          "@babel/transform-react-jsx-source"
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx-source": "^7.2.0",
+    "babel-preset-expo": "^5.0.0",
+    "react-native-debugger-open": "^0.3.17"
+  },
+  "private": true
+}
