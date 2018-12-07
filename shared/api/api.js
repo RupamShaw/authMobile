@@ -20,22 +20,14 @@ function queryString(params) {
 }
 
 async function post(endpoint: string, Type: constructor, params: object) {
-  console.log('post endpoint',endpoint)
   const url = constructURL(params ? `${endpoint}?${queryString(params)}` : endpoint);
   const response = await fetch(url, { method: 'POST' })
   if (!response.ok) throw new Error(response.statusCode);
   const json = response.json();  
-  let tt= Type ? await json.then(data =>{ 
-    console.log('hggggjhg',data);  
-    if(data===0){ 
-      console.log('in iffffff')
-      return data} else{ 
-        console.log('ineeeeeeel')
-        return new Type(data)}
+  return Type ? await json.then(data =>{ 
+    return (data===0)?  data : new Type(data)
   })  : await json;
-  console.log('jsondata tt')
-  console.log(tt)
-  return tt;}
+  }
 
 async function get(endpoint: string, type: constructor, params: object) {
   return fetch(

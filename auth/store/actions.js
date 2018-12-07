@@ -85,11 +85,8 @@ export function login(userValues: Object) {
         throw new Error('422');
       }
     } catch (responseCode) {
-      // console.log(responseCode);
       //responseCode will be empty when no internet else Error(message) thrown
       let code=''
-      console.log(responseCode.message);
-      
       if(responseCode!==undefined )
         code=responseCode.message
       dispatch(loginFailed({ error: getErrorTranslationForResponseCode(code) }));

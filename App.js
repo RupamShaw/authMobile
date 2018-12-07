@@ -84,7 +84,6 @@ class App extends Component {
   render() {
     addLocaleData([en, ch]);
     const { fontLoaded } = this.state;
-    console.log('hhhhhhhhhhh')
     return (
       <View style={styles.container}>
         <StatusBar backgroundColor="black" barStyle="light-content" hidden={false} />

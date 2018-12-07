@@ -112,32 +112,30 @@ export class SignIn extends Component {
   getToastMessage = () => {
     const { userName, password } = this.state;
     const { translations } = this.props;
-    console.log('not username ',!userName)
-      console.log('not pass ',!password)
-      if (!userName && !password) {
-        return translations.login_username_password_required;
-      }
-      if (!userName) {
-        return translations.login_username_required;
-      }
-      if (!password) {
-        return translations.login_password_required;
-      }
-      return ""  
+    if (!userName && !password) {
+      return translations.login_username_password_required;
+    }
+    if (!userName) {
+      return translations.login_username_required;
+    }
+    if (!password) {
+      return translations.login_password_required;
+    }
+    return ""  
   };
   getToastMessageforInvalid = () => {
     const { userName, password } = this.state;
     const { translations } = this.props;
-      if (!isUsernameValid(userName) && !isPasswordValid(password) ) {
-        return translations.login_username_password_invalid;
-      }
-      if (!isUsernameValid(userName)) {
-        return translations.login_username_invalid;
-      }
-      if (!isPasswordValid(password)) {
-        return translations.login_password_invalid;
-      }
-      return "";
+    if (!isUsernameValid(userName) && !isPasswordValid(password)) {
+      return translations.login_username_password_invalid;
+    }
+    if (!isUsernameValid(userName)) {
+      return translations.login_username_invalid;
+    }
+    if (!isPasswordValid(password)) {
+      return translations.login_password_invalid;
+    }
+    return "";
   };
   loginSubmit = () => {
     const { userName, password } = this.state;
