@@ -1,5 +1,8 @@
 # authMobile
 react native redux auth  on heroku node api  
+deploy in heroku
+https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app
+
 https://dashboard.heroku.com/apps/authent-api/deploy/heroku-git  heroku code in this 
 $ heroku login
 Clone the repository
